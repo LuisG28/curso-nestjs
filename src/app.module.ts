@@ -23,7 +23,8 @@ import { MongooseModule } from '@nestjs/mongoose';
     CoursesModule, 
     AuthModule, 
     VideosModule, 
-    AwardsModule, UsersModule
+    AwardsModule, 
+    UsersModule
   ],
   controllers: [AppController],
   providers: [AppService],
