@@ -14,7 +14,7 @@ async function bootstrap() {
     defaultVersion: '1',
     type: VersioningType.URI,
   });
-
+  
   const config = new DocumentBuilder()
     .addBearerAuth()
     .setTitle('API NEST JS CURSO')

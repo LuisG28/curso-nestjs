@@ -3,11 +3,15 @@ import { VideosService } from './videos.service';
 import { CreateVideoDto } from './dto/create-video.dto';
 import { UpdateVideoDto } from './dto/update-video.dto';
 import { ApiTags } from '@nestjs/swagger';
+import { CoursesService } from 'src/courses/courses.service';
 
 @ApiTags('videos')
 @Controller('videos')
 export class VideosController {
-  constructor(private readonly videosService: VideosService) {}
+  constructor(
+    private readonly videosService: VideosService,
+    private readonly courseService: CoursesService,
+  ) {}
 
   @Post()
   create(@Body() createVideoDto: CreateVideoDto) {

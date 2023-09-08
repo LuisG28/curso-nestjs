@@ -25,6 +25,11 @@ export class CoursesController {
   //   return this.coursesService.findOne(id);
   // }
 
+  @Get()
+  getAll(){
+    return this.coursesService.findAll();
+  }
+
   @Get(':tittle')
   getDetail(@Param('tittle', new SlugPipe()) title : string){
     console.log(title)
